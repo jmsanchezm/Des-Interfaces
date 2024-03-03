@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Juego</name>
+    </assembly>
+    <members>
+        <member name="M:Juego.Models.DelegateCommand.#ctor(System.Action)">
+            <summary>
+            Initializes a new instance of the RelayCommand class that 
+            can always execute.
+            </summary>
+            <param name="execute">The execution logic.</param>
+            <exception cref="T:System.ArgumentNullException">If the execute argument is null.</exception>
+        </member>
+        <member name="M:Juego.Models.DelegateCommand.#ctor(System.Action,System.Func{System.Boolean})">
+            <summary>
+            Initializes a new instance of the RelayCommand class.
+            </summary>
+            <param name="execute">The execution logic.</param>
+            <param name="canExecute">The execution status logic.</param>
+            <exception cref="T:System.ArgumentNullException">If the execute argument is null.</exception>
+        </member>
+        <member name="E:Juego.Models.DelegateCommand.CanExecuteChanged">
+            <summary>
+            Occurs when changes occur that affect whether the command should execute.
+            </summary>
+        </member>
+        <member name="M:Juego.Models.DelegateCommand.RaiseCanExecuteChanged">
+            <summary>
+            Raises the <see cref="E:Juego.Models.DelegateCommand.CanExecuteChanged" /> event.
+            </summary>
+        </member>
+        <member name="M:Juego.Models.DelegateCommand.CanExecute(System.Object)">
+            <summary>
+            Defines the method that determines whether the command can execute in its current state.
+            </summary>
+            <param name="parameter">This parameter will always be ignored.</param>
+            <returns>true if this command can be executed; otherwise, false.</returns>
+        </member>
+        <member name="M:Juego.Models.DelegateCommand.Execute(System.Object)">
+            <summary>
+            Defines the method to be called when the command is invoked. 
+            </summary>
+            <param name="parameter">This parameter will always be ignored.</param>
+        </member>
+        <member name="M:Juego.ViewModels.PantallaInicioVM.jugarCommand_Execute">
+            <summary>
+            Funcion que te lleva a la pantalla de partida
+            </summary>
+        </member>
+        <member name="M:Juego.ViewModels.PartidaVM.Iniciar">
+            <summary>
+            Inicia la conexion con el servidor
+            Llama al metodo SendCadenaEmoji del servidor
+            </summary>
+        </member>
+        <member name="M:Juego.ViewModels.PartidaVM.cuentaEmoji">
+            <summary>
+            Cuenta cuantas veces aparece el emoji seleccionado en la cadena de emojis
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Juego.ViewModels.PartidaVM.comprobacionesResultados(System.Int32)">
+            <summary>
+            Comprueba los resultados de la partida
+            </summary>
+            <param name="puntuacionp2"></param>
+        </member>
+    </members>
+</doc>

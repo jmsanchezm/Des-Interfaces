@@ -1,0 +1,1 @@
+C:\Users\sanch\OneDrive\Escritorio\2DAM\Desarrollo-Interfaces-1\JuegoSignalR\Juego\Juego.csproj;x64

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Juego.Views.Partida"
+             xmlns:local="clr-namespace:Juego.ViewModels"    
+             Title="Partida"
+             BackgroundColor="#ECE2FF">
+
+    <ContentPage.BindingContext>
+        <local:PartidaVM/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Encuentra los emojis"
+                       FontSize="Large"
+                       FontAttributes="Bold"
+                       FontFamily="Comic-Sans"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label Text="{Binding Segundos}"/>
+                <Label Text="seg restantes"/>
+            </HorizontalStackLayout>
+
+            <Label 
+                x:Name="Ecadena"
+                Text= "{Binding CadenaEmoji}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                WidthRequest="280"
+                FontSize="19"/>
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Label Text="Emoji a encontrar: "/>
+                <Label 
+                    Text= "{Binding EmojiSeleccionado}"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Label Text="Encontrados: "
+                       FontAttributes="Bold"/>
+                <Label Text="{Binding Recuento}"/>
+            </HorizontalStackLayout>
+
+            <Button Text="Sumar uno"
+                    WidthRequest="200"
+                    Command="{Binding SumaCommand}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

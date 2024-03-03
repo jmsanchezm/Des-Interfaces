@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Juego.ViewModels"    
+             x:Class="Juego.MainPage"
+             BackgroundColor="#ECE2FF">
+
+    <ContentPage.BindingContext>
+        <local:PantallaInicioVM/>
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center" >
+
+
+        <Label Text="Bienvenido a Encuentra el Emoji"
+                FontSize="Large"
+                HorizontalOptions="Center"
+               FontAttributes="Bold"/>
+                
+        <Button Text="Pulsa para jugar"
+                Command="{Binding JugarCommand}"
+                WidthRequest="200"/>
+    </VerticalStackLayout>
+
+
+</ContentPage>
